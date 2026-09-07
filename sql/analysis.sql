@@ -18,3 +18,13 @@ SELECT flight_date,
 FROM flights
 GROUP BY flight_date
 ORDER BY flight_date;
+
+-- Delay rate by origin airport, limited to airports with meaningful flight volume
+SELECT ap.airport_code, COUNT(*) AS total_flights,
+       ROUND(100.0 * SUM(CASE WHEN f.arr_del15 THEN 1 ELSE 0 END) / COUNT(*), 2) AS delay_pct
+FROM flights f
+JOIN airports ap ON f.origin_airport_id = ap.airport_id
+GROUP BY ap.airport_code
+HAVING COUNT(*) >= 1000
+ORDER BY delay_pct DESC
+LIMIT 15;
