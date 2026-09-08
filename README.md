@@ -69,6 +69,8 @@ excluded, since their delay status isn't meaningfully defined.
 
 ## Dashboard
 
+![Dashboard screenshot](screenshots/dashboard.png)
+
 Built with Streamlit, showing the delay trend over January, delay rate 
 comparison across airlines, and delay rate plotted against weather 
 conditions (precipitation and temperature). Run locally with:
