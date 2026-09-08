@@ -69,11 +69,15 @@ excluded, since their delay status isn't meaningfully defined.
 
 ## Dashboard
 
-![Dashboard screenshot](screenshots/dashboard.png)
-
 Built with Streamlit, showing the delay trend over January, delay rate 
 comparison across airlines, and delay rate plotted against weather 
-conditions (precipitation and temperature). Run locally with:
+conditions (precipitation and temperature).
+
+![Delay trend](screenshots/trend.png)
+![Delay rate by airline](screenshots/airline.png)
+![Delay vs weather](screenshots/weather.png)
+
+Run locally with:
 
 ```bash
 streamlit run app.py
