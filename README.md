@@ -67,6 +67,16 @@ excluded, since their delay status isn't meaningfully defined.
   features, ahead of scheduling factors like departure hour or flight 
   distance.
 
+## Dashboard
+
+Built with Streamlit, showing the delay trend over January, delay rate 
+comparison across airlines, and delay rate plotted against weather 
+conditions (precipitation and temperature). Run locally with:
+
+```bash
+streamlit run app.py
+```
+
 ## Known Limitations
 
 - Scope limited to the 20 busiest airports (by origin flight volume) for 
