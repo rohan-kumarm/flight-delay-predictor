@@ -28,3 +28,9 @@ GROUP BY ap.airport_code
 HAVING COUNT(*) >= 1000
 ORDER BY delay_pct DESC
 LIMIT 15;
+
+-- Joins flights with weather to test whether the January delay climb tracks with weather.
+-- Finding: two distinct patterns emerge. Jan 9 shows a clear precipitation spike (0.887) 
+-- aligning with a delay spike (41.48%). Jan 15-17 shows delays staying high (26-46%) while 
+-- precipitation is low, but temperatures drop to near-freezing (31-33°F), suggesting 
+-- cold-related delays (de-icing, ground ops) rather than rain-driven ones on those days.
